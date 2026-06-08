@@ -1,0 +1,6 @@
+@import './Login.css';
+
+/* Register-specific overrides */
+.register-form {
+  gap: 1.125rem;
+}
