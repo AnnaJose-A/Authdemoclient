@@ -33,7 +33,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: node-app
-          path: dist
+          path: .
 
   deploy:
     runs-on: ubuntu-latest
@@ -51,9 +51,9 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_FF08542FEA3844B6B98A310AA992678A }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_F9147A33F77E45F580B0B49E45D47DCF }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_5C856548E78D433EA6D04996E260016E }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_4131751687504F1E8588E5C2A5F6A16E }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_5875CE17DA9845D6AA5F24C9D1F51B72 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_3E911B54C6174471BC8954EB09F87E62 }}
 
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
